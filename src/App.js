@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Login from './Login/Login'
+import Home from './Home/Home';
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      activeRout:0
+    }
+  }
+  changeRout(rout){
+    this.setState({activeRout:rout});
+  }
+  render(){
+    let {activeRout}=this.state;
 
-function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+     {activeRout===0 && <Login onRouteChange={this.changeRout.bind(this)}></Login>}
+        
+     {activeRout===2 && <Home></Home>}
+     
+      
     </div>
   );
+}
 }
 
 export default App;

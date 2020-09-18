@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: #4ecdec 2px solid; */
+}
+.home{
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login {
+    width: 400px;
+    border: #4ecdec 2px solid;
+    padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login h2 {
+    font-size: 45px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.login a {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.labl {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input[type='text'] {
+    background-color: #e6e6e6;
+    color: #626566;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+    border: none;
+    width: 85%;
+    padding: 20px 30px;
+}
+
+input[type='password'] {
+    background-color: #e6e6e6;
+    padding: 20px 30px;
+    color: #626566;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+    border: none;
+    width: 85%;
+}
+
+.enable {
+    padding: 15px 0px;
+    background-color: #4ecdec;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+}
+.disabl{
+    padding: 15px 0px;
+    background-color: #a2a6a7;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+}
+
+
+.err{
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
